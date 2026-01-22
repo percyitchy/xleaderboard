@@ -1,0 +1,376 @@
+.sell-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.sell-popup {
+    background: linear-gradient(135deg, rgba(20, 20, 30, 0.95) 0%, rgba(30, 30, 45, 0.95) 100%);
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    border-radius: 20px;
+    padding: 28px;
+    min-width: 380px;
+    max-width: 440px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(220, 38, 38, 0.1);
+}
+
+.sell-popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.sell-popup-close:hover {
+    color: var(--text-primary);
+}
+
+.sell-popup-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--accent-hot);
+    margin-bottom: 8px;
+}
+
+.sell-popup-question {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+/* Order Type Tabs */
+.sell-order-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.sell-tab {
+    flex: 1;
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sell-tab:hover:not(:disabled) {
+    color: var(--text-primary);
+}
+
+.sell-tab.active {
+    background: rgba(220, 38, 38, 0.25);
+    color: white;
+}
+
+.sell-tab:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Limit Price Input */
+.sell-limit-price {
+    margin-bottom: 16px;
+}
+
+.sell-limit-price label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.limit-price-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 12px 14px;
+    transition: all 0.2s;
+}
+
+.limit-price-input-wrapper:focus-within {
+    border-color: rgba(220, 38, 38, 0.5);
+    background: rgba(220, 38, 38, 0.1);
+}
+
+.limit-price-symbol {
+    color: var(--text-muted);
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.limit-price-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font-family);
+}
+
+.limit-price-input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+.limit-price-input::-webkit-outer-spin-button,
+.limit-price-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.limit-price-hint {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+.sell-popup-info {
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.sell-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.sell-info-row:last-child {
+    margin-bottom: 0;
+}
+
+.sell-info-row strong {
+    color: var(--text-primary);
+}
+
+.sell-price {
+    color: var(--accent-hot) !important;
+}
+
+.vwap-indicator {
+    color: var(--accent-new);
+    font-size: 13px;
+}
+
+.vwap-loading {
+    opacity: 0.7;
+}
+
+/* Percentage Input */
+.sell-popup-percentage {
+    margin-bottom: 20px;
+}
+
+.sell-popup-percentage label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.percentage-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.percentage-btn {
+    flex: 1;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.percentage-btn:hover:not(:disabled) {
+    background: rgba(220, 38, 38, 0.15);
+    border-color: rgba(220, 38, 38, 0.4);
+    color: var(--text-primary);
+}
+
+.percentage-btn.active {
+    background: rgba(220, 38, 38, 0.25);
+    border-color: rgba(220, 38, 38, 0.6);
+    color: white;
+}
+
+.percentage-slider {
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    outline: none;
+}
+
+.percentage-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+}
+
+.percentage-value {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--accent-hot);
+    margin-top: 12px;
+}
+
+/* Summary */
+.sell-popup-summary {
+    padding: 14px;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.15) 0%, rgba(185, 28, 28, 0.1) 100%);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.summary-row:last-child {
+    margin-bottom: 0;
+}
+
+.summary-row strong {
+    color: var(--text-primary);
+}
+
+.summary-proceeds {
+    color: var(--accent-hot) !important;
+    font-size: 17px;
+}
+
+/* Messages */
+.sell-popup-warning {
+    padding: 12px;
+    background: rgba(255, 171, 0, 0.15);
+    border: 1px solid rgba(255, 171, 0, 0.3);
+    border-radius: 10px;
+    color: var(--accent-new);
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.sell-popup-error {
+    padding: 12px;
+    background: rgba(255, 7, 58, 0.15);
+    border: 1px solid rgba(255, 7, 58, 0.3);
+    border-radius: 10px;
+    color: var(--accent-hot);
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.sell-popup-success {
+    padding: 12px;
+    background: rgba(39, 255, 20, 0.15);
+    border: 1px solid rgba(39, 255, 20, 0.3);
+    border-radius: 10px;
+    color: var(--accent-fresh);
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Actions */
+.sell-popup-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.sell-popup-cancel {
+    flex: 1;
+    padding: 14px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: var(--text-muted);
+    font-size: 16px;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sell-popup-cancel:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sell-popup-confirm {
+    flex: 1.5;
+    padding: 14px;
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sell-popup-confirm:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    transform: translateY(-1px);
+}
+
+.sell-popup-confirm:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}

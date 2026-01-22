@@ -1,0 +1,148 @@
+.signal-detail-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+}
+
+.signal-detail-header {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+}
+
+.signal-detail-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+    text-align: center;
+}
+
+.signal-detail-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signal-detail-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.stat-icon {
+    font-size: 16px;
+}
+
+.stat-value {
+    color: var(--text-primary);
+}
+
+/* Wallet Table */
+.wallet-table {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.wallet-table-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-muted);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wallet-table-header>span {
+    text-align: center;
+}
+
+.wallet-table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.wallet-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wallet-col-address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wallet-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.wallet-address {
+    font-size: 14px;
+    font-family: monospace;
+    color: var(--text-primary);
+}
+
+.wallet-col-winrate {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #12B981;
+}
+
+.wallet-col-price {
+    font-size: 14px;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.wallet-col-bet {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* Buy Button */
+.signal-detail-buy-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent-blue);
+    border: none;
+    border-radius: 15px;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    cursor: pointer;
+    margin-top: auto;
+    transition: opacity 0.2s;
+}
+
+.signal-detail-buy-btn:hover {
+    opacity: 0.9;
+}

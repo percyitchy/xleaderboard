@@ -1,0 +1,81 @@
+.trader-hover-card {
+    position: fixed;
+    z-index: 1000;
+    background: rgba(20, 20, 30, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 16px;
+    min-width: 240px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    pointer-events: auto;
+    animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.trader-hover-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trader-hover-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.trader-hover-card-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.trader-hover-card-value {
+    color: #fff;
+    font-weight: 600;
+}
+
+.trader-hover-card-value.positive {
+    color: #4ade80;
+}
+
+.trader-hover-card-value.negative {
+    color: #f87171;
+}
+
+.trader-hover-card-loading {
+    padding: 8px 0;
+}
+
+.trader-hover-card-skeleton {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    text-align: center;
+}
+
+.trader-hover-card-error {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.trader-hover-card-note {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    font-style: italic;
+    margin-top: -4px;
+    padding-left: 4px;
+}

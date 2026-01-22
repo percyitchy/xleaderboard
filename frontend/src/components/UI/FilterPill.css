@@ -1,0 +1,59 @@
+.filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    background: var(--pill-bg, rgba(255, 255, 255, 0.15));
+    border: 1px solid var(--pill-accent, var(--accent-gray));
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-primary);
+    backdrop-filter: blur(var(--blur-glass));
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+}
+
+.filter-pill:hover:not(.no-hover) {
+    opacity: 0.8;
+}
+
+.filter-pill.active {
+    color: #000000;
+    font-weight: 700;
+}
+
+.filter-pill-icon {
+    font-size: 14px;
+}
+
+.filter-pill-label {
+    white-space: nowrap;
+}
+
+.filter-pill-count {
+    opacity: 0.9;
+}
+
+/* Small variant for market card tags - no hover effect */
+.filter-pill-small {
+    padding: 4px 12px;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: default;
+}
+
+.filter-pill-small .filter-pill-icon {
+    font-size: 12px;
+}
+
+/* No hover class */
+.filter-pill.no-hover {
+    cursor: default;
+}
+
+.filter-pill.no-hover:hover {
+    opacity: 1;
+}

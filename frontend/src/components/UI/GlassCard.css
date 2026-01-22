@@ -1,0 +1,37 @@
+.glass-card {
+    position: relative;
+    background: var(--bg-surface);
+    backdrop-filter: blur(var(--blur-glass));
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+    border-radius: var(--radius-card);
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    overflow: hidden;
+}
+
+/* Gradient border using pseudo-element */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-card);
+    padding: 1px;
+    background: linear-gradient(to bottom,
+            rgba(184, 185, 187, 0.75) 0%,
+            rgba(255, 255, 255, 0.75) 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.glass-card:hover {
+    background: var(--glass-fill-hover);
+    transform: translateY(-2px);
+}

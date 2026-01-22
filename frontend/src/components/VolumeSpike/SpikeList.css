@@ -1,0 +1,139 @@
+.spike-list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    height: calc(100vh - 40px);
+    overflow: hidden;
+}
+
+.spike-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 10px;
+}
+
+.spike-list-empty {
+    color: var(--text-muted);
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 16px;
+}
+
+/* Spike Row */
+.spike-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 45px 25px;
+    cursor: default;
+}
+
+.spike-row-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.spike-row-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.spike-row-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+.spike-row-stats {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.spike-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+}
+
+.spike-stat-icon {
+    font-size: 14px;
+}
+
+.spike-stat strong {
+    font-weight: 700;
+}
+
+.spike-row-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.spike-row-time {
+    font-size: 14px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    text-align: right;
+    min-width: 180px;
+}
+
+.spike-row-buy-btn {
+    padding: 4px 24px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    white-space: nowrap;
+    min-width: 180px;
+    text-align: center;
+}
+
+.spike-row-buy-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.spike-row-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spike-fire {
+    font-size: 15px;
+}
+
+.spike-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 0, 0, 0.15);
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 12px;
+    height: 14px;
+    line-height: 1;
+}

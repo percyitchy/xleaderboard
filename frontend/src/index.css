@@ -1,0 +1,135 @@
+/* ==========================
+   Design Tokens (from Figma)
+   ========================== */
+
+:root {
+  /* Colors - Backgrounds */
+  --bg-primary: #050505;
+  --bg-surface: rgba(0, 0, 0, 0.001);
+
+  /* Colors - Glass */
+  --glass-fill: rgba(255, 255, 255, 0.1);
+  --glass-fill-hover: rgba(255, 255, 255, 0.15);
+  --glass-border: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(184, 185, 187, 0.6) 100%);
+
+  /* Colors - Accents */
+  --accent-hot: #FF073A;
+  --accent-whale: #04D9FF;
+  --accent-fresh: #39FF14;
+  --accent-new: #FF9500;
+  --accent-blue: #2463EB;
+  --accent-gray: #B8B9BB;
+
+  /* Colors - Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(184, 185, 187, 1);
+
+  /* Typography */
+  --font-family: 'Afacad', sans-serif;
+  --font-size-xs: 15px;
+  --font-size-sm: 16px;
+  --font-size-base: 20px;
+  --font-size-lg: 30px;
+
+  /* Spacing & Sizing */
+  --radius-card: 25px;
+  --radius-pill: 13px;
+  --radius-button: 20px;
+  --radius-header: 20px;
+
+  /* Effects */
+  --shadow-glass: 2px 5px 12px rgba(0, 0, 0, 0.2);
+  --blur-glass: 3px;
+
+  /* Layout */
+  --sidebar-width: 240px;
+  --header-height: 60px;
+}
+
+/* ==========================
+   Global Reset & Base Styles
+   ========================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================
+   Utility Classes
+   ========================== */
+
+.glass {
+  background: var(--glass-fill);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid transparent;
+  border-image: var(--glass-border) 1;
+  box-shadow: var(--shadow-glass);
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* ==========================
+   Scrollbar Styling
+   ========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================
+   App Layout
+   ========================== */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.app-main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  overflow-y: auto;
+  height: 100vh;
+}
